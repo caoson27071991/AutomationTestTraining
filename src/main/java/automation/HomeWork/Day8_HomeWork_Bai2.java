@@ -9,6 +9,7 @@ import org.testng.annotations.*;
 public class Day8_HomeWork_Bai2 extends CommonBase {
     @BeforeMethod
     public void initChromeWebDriver() {
+
         initChromeDriver("https://automationfc.github.io/basic-form/index.html");
     }
     @Test (priority = 1)
