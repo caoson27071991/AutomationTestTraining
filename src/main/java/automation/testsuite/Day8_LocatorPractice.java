@@ -11,10 +11,8 @@ public class Day8_LocatorPractice extends CommonBase {
     @BeforeMethod
     public void initChromeWebDriver(){
         initChromeDriver("https://rise.fairsketch.com/signin");
-//        initChromeDriver("https://bepantoan.vn/danh-muc/may-hut-mui");
-
     }
-    @Test
+    @Test (priority = 1)
     public void findlocatorById() {
         WebElement email = driver.findElement(By.id("email"));
         System.out.println("Email locator :" + email);
@@ -23,9 +21,9 @@ public class Day8_LocatorPractice extends CommonBase {
         WebElement signin = driver.findElement(By.tagName("button"));
         System.out.println("Signin locator :" + signin);
     }
-
+    @Test (priority = 2)
     public void findlocatorByLinktext() {
-
+        driver.navigate().to("https://bepantoan.vn/danh-muc/may-hut-mui");
         WebElement textmhmAmtu = driver.findElement(By.linkText("Máy Hút Mùi Âm Tủ"));
         System.out.println("Linktext Máy hút mùi âm tủ : "+textmhmAmtu);
         WebElement textmhmCodien = driver.findElement(By.partialLinkText("Cổ Điển"));
