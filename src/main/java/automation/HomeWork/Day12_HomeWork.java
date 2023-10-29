@@ -85,6 +85,7 @@ public class Day12_HomeWork extends CommonBase {
 
         State.selectByVisibleText("Colorado");
         pause(2000);
+        Assert.assertEquals("Colorado",State.getFirstSelectedOption().getText());
 
         WebElement elementHostingYes = driver.findElement(By.xpath(" //input[@name='hosting' and @value='yes']"));
         pause(2000);
