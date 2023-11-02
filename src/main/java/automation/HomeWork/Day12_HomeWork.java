@@ -89,8 +89,11 @@ public class Day12_HomeWork extends CommonBase {
 
         WebElement elementHostingYes = driver.findElement(By.xpath(" //input[@name='hosting' and @value='yes']"));
         pause(2000);
-
-        elementHostingYes.click();
+        if (elementHostingYes.isSelected()) {
+            System.out.println("Radio đã được chọn");
+        }else {
+            elementHostingYes.click();
+        }
         pause(2000);
 
         driver.close();
