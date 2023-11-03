@@ -25,7 +25,7 @@ public class Day14_HomeWork_SignUpAlada extends CommonBase {
         assertEquals(true,driver.findElement(By.xpath("//div[@class='avatar2']")).isDisplayed());
     }
     @Test(priority = 2)
-    public void ChangePasswordSuccwssfully(){
+    public void ChangePasswordSuccessfully(){
         Day14_HomeWork_AladaPage changepass = new Day14_HomeWork_AladaPage(driver);
         changepass.ChangePassword("Caoson400@gmail.com","Caoson1!","Caoson2!");
     }
