@@ -1,27 +1,25 @@
 package automation.PageLocator;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.testng.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-
-public class LoginPage {
+public class Day13_LoginPage {
 	WebDriver driver;
 	private By textEmail = By.id("email");
 	private By textPass = By.id("password");
 	private By buttonLogin = By.xpath("//button[@type='submit']");
 	public static By errorAuthentication = By.xpath("//div[@class='alert alert-danger']");
- public LoginPage (WebDriver _driver)
+ public Day13_LoginPage(WebDriver _driver)
  {
   this.driver = _driver;
  }
  
- public void Login (String email, String pass)
+ public void LoginFunction (String email, String pass)
  {
 	 // Nhập vào textbox Email
 	 WebElement txtEmail = driver.findElement(textEmail);
