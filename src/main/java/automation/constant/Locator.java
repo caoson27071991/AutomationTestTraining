@@ -13,4 +13,5 @@ public class Locator {
     public static By Therecord = By.xpath("//div[contains(text(),'The record')]");
     public static By Successfully = By.xpath("//div[text()='Your account has been created successfully! ']");
     public static String webURL = "https://rise.fairsketch.com/signin?redirect=https://rise.fairsketch.com/events";
+    public static String webURL2 = "https://techydevs.com/demos/themes/html/trizen-demo/trizen/index.html";
 }

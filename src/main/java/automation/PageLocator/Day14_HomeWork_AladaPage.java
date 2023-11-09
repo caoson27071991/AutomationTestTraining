@@ -1,10 +1,11 @@
 package automation.PageLocator;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.concurrent.TimeUnit;
 
 public class Day14_HomeWork_AladaPage {
@@ -77,7 +78,7 @@ public class Day14_HomeWork_AladaPage {
         }
         ButtonDangki.click();
     }
-    public void ChangePassword(String email,String oldpasswork,String newpasswork){
+    public void ChangePassword(String email,String oldpasswork,String newpasswork) throws InterruptedException {
         Dangnhap.click();
         LoginEmail.clear();
         LoginEmail.sendKeys(email);
@@ -88,6 +89,10 @@ public class Day14_HomeWork_AladaPage {
         Avata.click();
         Chinhsuathongtin.click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        WebElement element = driver.findElement(By.xpath("//input[@id='txtpassword']"));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        Thread.sleep(3000);
         OldPassword.clear();
         OldPassword.sendKeys(oldpasswork);
         NewPassword.clear();
