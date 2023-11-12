@@ -1,12 +1,12 @@
 package automation.HomeWork;
 
-import automation.common.CommonBase;
+import automation.common.CommonBase1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.*;
 
-public class Day8_HomeWork_Bai2 extends CommonBase {
+public class Day8_HomeWork_Bai2 extends CommonBase1 {
     @BeforeMethod
     public void initChromeWebDriver() {
 

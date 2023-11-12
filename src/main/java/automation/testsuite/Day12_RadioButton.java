@@ -1,12 +1,12 @@
 package automation.testsuite;
 
-import automation.common.CommonBase;
+import automation.common.CommonBase1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Day12_RadioButton extends CommonBase {
+public class Day12_RadioButton extends CommonBase1 {
     @BeforeMethod
     public void OpenChrome(){
         driver= initChromeDriver("https://demo.seleniumeasy.com/basic-radiobutton-demo.html");

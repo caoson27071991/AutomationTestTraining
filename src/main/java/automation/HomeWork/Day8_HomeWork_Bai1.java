@@ -1,11 +1,11 @@
 package automation.HomeWork;
 
-import automation.common.CommonBase;
+import automation.common.CommonBase1;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.*;
 
-public class Day8_HomeWork_Bai1 extends CommonBase {
+public class Day8_HomeWork_Bai1 extends CommonBase1 {
     @BeforeMethod
     public void initChromeWebDriver() {
         initChromeDriver("https://selectorshub.com/xpath-practice-page/");

@@ -1,16 +1,16 @@
 package automation.testsuite;
 
 import automation.PageLocator.Day15_TrizenFightFactory;
-import automation.common.CommonBase;
-import automation.constant.Locator;
+import automation.common.CommonBase1;
+import automation.constant.CT_LocatorRise;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Day15_TrizenFlight extends CommonBase {
+public class Day15_TrizenFlight extends CommonBase1 {
     @BeforeMethod
     public void OpenChrome(){
-        driver = initChromeDriver(Locator.webURL2);
+        driver = initChromeDriver(CT_LocatorRise.webURL2);
     }
     @Test
     public void FindFlights(){

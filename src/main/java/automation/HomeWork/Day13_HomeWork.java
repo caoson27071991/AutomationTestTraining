@@ -1,9 +1,9 @@
 package automation.HomeWork;
 
 
-import automation.common.CommonBase;
+import automation.common.CommonBase1;
 import automation.constant.Accoun;
-import automation.constant.Locator;
+import automation.constant.CT_LocatorRise;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,124 +13,124 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
-public class Day13_HomeWork extends CommonBase {
+public class Day13_HomeWork extends CommonBase1 {
     @BeforeMethod
     public void OpenChromDriver() {
-        driver = initChromeDriver(Locator.webURL);
+        driver = initChromeDriver(CT_LocatorRise.webURL);
     }
 
     @Test (priority = 1)
     public void LoginSuccessfully() {
-        WebElement txtemail = driver.findElement(Locator.Email);
+        WebElement txtemail = driver.findElement(CT_LocatorRise.Email);
         if (txtemail.isDisplayed()) {
             txtemail.clear();
             txtemail.sendKeys(Accoun.Emailtrue);
         }
-        WebElement txtpass = driver.findElement(Locator.Password);
+        WebElement txtpass = driver.findElement(CT_LocatorRise.Password);
         if (txtpass.isDisplayed()) {
             txtpass.clear();
             txtpass.sendKeys(Accoun.Passtrue);
         }
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        WebElement buttonSignin = driver.findElement(Locator.SignIn);
+        WebElement buttonSignin = driver.findElement(CT_LocatorRise.SignIn);
         if (buttonSignin.isDisplayed()) {
             buttonSignin.click();
         }
-        assertEquals(true, driver.findElement(Locator.Dashboard).isDisplayed());
+        assertEquals(true, driver.findElement(CT_LocatorRise.Dashboard).isDisplayed());
     }
 
     @Test (priority = 2)
     public void LoginFail_IncorrectEmail() {
-        WebElement txtemail = driver.findElement(Locator.Email);
+        WebElement txtemail = driver.findElement(CT_LocatorRise.Email);
         if (txtemail.isDisplayed()) {
             txtemail.clear();
             txtemail.sendKeys(Accoun.Emailfalse);
         }
-        WebElement txtpass = driver.findElement(Locator.Password);
+        WebElement txtpass = driver.findElement(CT_LocatorRise.Password);
         if (txtpass.isDisplayed()) {
             txtpass.clear();
             txtpass.sendKeys(Accoun.Passtrue);
         }
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        WebElement buttonSignin = driver.findElement(Locator.SignIn);
+        WebElement buttonSignin = driver.findElement(CT_LocatorRise.SignIn);
         if (buttonSignin.isDisplayed()) {
             buttonSignin.click();
         }
-        assertEquals(true, driver.findElement(Locator.Authenticationfailed).isDisplayed());
-        assertEquals("Authentication failed!", driver.findElement(Locator.Authenticationfailed).getText());
+        assertEquals(true, driver.findElement(CT_LocatorRise.Authenticationfailed).isDisplayed());
+        assertEquals("Authentication failed!", driver.findElement(CT_LocatorRise.Authenticationfailed).getText());
     }
 
     @Test (priority = 3)
     public void LoginFail_IncorrectPassword() {
-        WebElement txtemail = driver.findElement(Locator.Email);
+        WebElement txtemail = driver.findElement(CT_LocatorRise.Email);
         if (txtemail.isDisplayed()) {
             txtemail.clear();
             txtemail.sendKeys(Accoun.Emailtrue);
         }
-        WebElement txtpass = driver.findElement(Locator.Password);
+        WebElement txtpass = driver.findElement(CT_LocatorRise.Password);
         if (txtpass.isDisplayed()) {
             txtpass.clear();
             txtpass.sendKeys(Accoun.Passfalse);
         }
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        WebElement buttonSignin = driver.findElement(Locator.SignIn);
+        WebElement buttonSignin = driver.findElement(CT_LocatorRise.SignIn);
         if (buttonSignin.isDisplayed()) {
             buttonSignin.click();
         }
-        assertEquals(true, driver.findElement(Locator.Authenticationfailed).isDisplayed());
-        assertEquals("Authentication failed!", driver.findElement(Locator.Authenticationfailed).getText());
+        assertEquals(true, driver.findElement(CT_LocatorRise.Authenticationfailed).isDisplayed());
+        assertEquals("Authentication failed!", driver.findElement(CT_LocatorRise.Authenticationfailed).getText());
     }
 
     @Test (priority = 4)
     public void LoginFail_IncorrectEmailPassword() {
-        WebElement txtemail = driver.findElement(Locator.Email);
+        WebElement txtemail = driver.findElement(CT_LocatorRise.Email);
         if (txtemail.isDisplayed()) {
             txtemail.clear();
             txtemail.sendKeys(Accoun.Emailfalse);
         }
-        WebElement txtpass = driver.findElement(Locator.Password);
+        WebElement txtpass = driver.findElement(CT_LocatorRise.Password);
         if (txtpass.isDisplayed()) {
             txtpass.clear();
             txtpass.sendKeys(Accoun.Passfalse);
         }
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        WebElement buttonSignin = driver.findElement(Locator.SignIn);
+        WebElement buttonSignin = driver.findElement(CT_LocatorRise.SignIn);
         if (buttonSignin.isDisplayed()) {
             buttonSignin.click();
         }
-        assertEquals(true, driver.findElement(Locator.Authenticationfailed).isDisplayed());
-        assertEquals("Authentication failed!", driver.findElement(Locator.Authenticationfailed).getText());
+        assertEquals(true, driver.findElement(CT_LocatorRise.Authenticationfailed).isDisplayed());
+        assertEquals("Authentication failed!", driver.findElement(CT_LocatorRise.Authenticationfailed).getText());
     }
 
     @Test (priority = 5)
     public void LogoutSuccessfully() {
-        WebElement txtemail = driver.findElement(Locator.Email);
+        WebElement txtemail = driver.findElement(CT_LocatorRise.Email);
         if (txtemail.isDisplayed()) {
             txtemail.clear();
             txtemail.sendKeys(Accoun.Emailtrue);
         }
-        WebElement txtpass = driver.findElement(Locator.Password);
+        WebElement txtpass = driver.findElement(CT_LocatorRise.Password);
         if (txtpass.isDisplayed()) {
             txtpass.clear();
             txtpass.sendKeys(Accoun.Passtrue);
         }
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        WebElement buttonSignin = driver.findElement(Locator.SignIn);
+        WebElement buttonSignin = driver.findElement(CT_LocatorRise.SignIn);
         if (buttonSignin.isDisplayed()) {
             buttonSignin.click();
         }
-        assertEquals(true, driver.findElement(Locator.Dashboard).isDisplayed());
-        WebElement dropdownAvata = driver.findElement(Locator.MyAvata);
+        assertEquals(true, driver.findElement(CT_LocatorRise.Dashboard).isDisplayed());
+        WebElement dropdownAvata = driver.findElement(CT_LocatorRise.MyAvata);
         if (dropdownAvata.isDisplayed()){
             dropdownAvata.click();
         }
         pause(2000);
-        WebElement Signout = driver.findElement(Locator.SignOut);
+        WebElement Signout = driver.findElement(CT_LocatorRise.SignOut);
         if (Signout.isDisplayed()){
             Signout.click();
         }
         pause(2000);
-        assertEquals(true,driver.findElement(Locator.SignIn).isDisplayed());
+        assertEquals(true,driver.findElement(CT_LocatorRise.SignIn).isDisplayed());
     }
     @AfterMethod
     public void closeBrowserTest() {

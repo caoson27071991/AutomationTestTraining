@@ -9,7 +9,7 @@ Command duration or timeout: 2.26 seconds
 Build info: version: &#039;2.53.1&#039;, revision: &#039;a36b8b1cd5757287168e54b817830adce9b0158d&#039;, time: &#039;2016-06-30 19:26:09&#039;
 System info: host: &#039;Admin-PC&#039;, ip: &#039;192.168.1.63&#039;, os.name: &#039;Windows 10&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;17.0.7&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.SessionNotCreatedException">
-      <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114
+        <![CDATA[org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 114
 Current browser version is 113.0.5672.127 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
   (Driver info: chromedriver=114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}),platform=Windows NT 10.0.19045 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 2.26 seconds
@@ -30,7 +30,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
-at automation.common.CommonBase.initDriverTest(CommonBase.java:54)
+at automation.common.CommonBase1.initDriverTest(CommonBase.java:54)
 at automation.testsuite.TrangNguyen.BTVN09.Bai1vaBai3(BTVN09.java:12)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

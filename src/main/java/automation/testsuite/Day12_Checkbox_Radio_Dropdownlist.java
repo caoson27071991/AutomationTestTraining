@@ -1,6 +1,6 @@
 package automation.testsuite;
 
-import automation.common.CommonBase;
+import automation.common.CommonBase1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Day12_Checkbox_Radio_Dropdownlist extends CommonBase {
+public class Day12_Checkbox_Radio_Dropdownlist extends CommonBase1 {
     @BeforeMethod
     public void OpenChrome(){
         driver= initChromeDriver("https://demo.seleniumeasy.com/basic-checkbox-demo.html");
