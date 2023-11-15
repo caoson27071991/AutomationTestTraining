@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class Day16_AlertPractice extends CommonBase {
     @BeforeMethod
     public void OpenChrome(){
-        driver = initChromeDriver(CT_LocatorRise.webURL3);
+        driver = initChromeDriver(CT_LocatorRise.webURLDemoQuru99);
     }
     @Test
     public void DeleteCustomer(){
@@ -25,7 +25,7 @@ public class Day16_AlertPractice extends CommonBase {
     }
     @Test
     public void DemoAlert(){
-        driver.navigate().to(CT_LocatorRise.webURL4);
+        driver.navigate().to(CT_LocatorRise.webURLDemoAutomation);
         click(By.xpath("//a[normalize-space()='Alert with OK & Cancel']"));
         click(By.xpath("//button[normalize-space()='click the button to display a confirm box']"));
         driver.switchTo().alert().dismiss();

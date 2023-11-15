@@ -35,6 +35,13 @@ public class Day16_HomeWork extends CommonBase {
         assertEquals(true,driver.findElement(CT_LocatorAlada.Thongtinkhoahoc).isDisplayed());
 
 
+        type(CT_LocatorAlada.OldPassword,Accoun.Passnew);
+        type(CT_LocatorAlada.NewPassword,Accoun.PassAlada);
+        type(CT_LocatorAlada.ReNewpassword,Accoun.PassAlada);
+        click(CT_LocatorAlada.ButtonLuumatkhau);
+        pause(2000);
+        driver.switchTo().alert().accept();
+
 
     }
     @AfterMethod
@@ -42,10 +49,3 @@ public class Day16_HomeWork extends CommonBase {
         quitDriver(driver);
     }
 }
-
-//    type(CT_LocatorAlada.OldPassword,Accoun.Passnew);
-//    type(CT_LocatorAlada.NewPassword,Accoun.PassAlada);
-//    type(CT_LocatorAlada.ReNewpassword,Accoun.PassAlada);
-//    click(CT_LocatorAlada.ButtonLuumatkhau);
-//    pause(2000);
-//        driver.switchTo().alert().accept();

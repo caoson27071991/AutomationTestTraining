@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CommonBase {
     public WebDriver driver;
-    public int initWaitTime = 10;
+    public int initWaitTime = 50;
     public WebDriver initChromeDriver(String URL)
     {
         ChromeOptions options = new ChromeOptions();

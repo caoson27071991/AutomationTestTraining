@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class Day15_TrizenFlight extends CommonBase1 {
     @BeforeMethod
     public void OpenChrome(){
-        driver = initChromeDriver(CT_LocatorRise.webURL2);
+        driver = initChromeDriver(CT_LocatorRise.webURLDemoQuru99);
     }
     @Test
     public void FindFlights(){

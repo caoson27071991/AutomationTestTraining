@@ -15,7 +15,7 @@ public class Day14_Login extends CommonBase1 {
     @BeforeMethod
     public void OpenChrome() {
 
-        driver = initChromeDriver(CT_LocatorRise.webURL);
+        driver = initChromeDriver(CT_LocatorRise.webURLRise);
 }
     @Test(priority = 1)
     public void LoginSuccessfully() {

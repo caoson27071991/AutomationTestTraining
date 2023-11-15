@@ -16,7 +16,7 @@ import static org.testng.Assert.assertEquals;
 public class Day13_HomeWork extends CommonBase1 {
     @BeforeMethod
     public void OpenChromDriver() {
-        driver = initChromeDriver(CT_LocatorRise.webURL);
+        driver = initChromeDriver(CT_LocatorRise.webURLRise);
     }
 
     @Test (priority = 1)
